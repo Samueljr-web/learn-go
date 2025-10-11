@@ -7,27 +7,24 @@ import (
 
 
 func getInitials(n string) (string, string) {
-   s := strings.ToUpper(n) //capitalize strings
-   names := strings.Split(s, " ") //split into a slice
+   s := strings.ToUpper(n)
+   name := strings.Split(s, " ")
 
    var initials []string
-   
-   for _,v := range names{
-    initials = append(initials, v[:1])
+   for _,v := range name{
+      initials = append(initials, v[:1])
    }
 
-   if len(initials) > 1 {
-    return  initials[0], initials[1]
+   if(len(initials) > 1){
+      return initials[0], initials[1]
    }
 
    return initials[0], "_"
 }
 
 func main() {
-   fn1, sn1 := getInitials("Samuel Adeyemi")
-   fmt.Println(fn1, sn1)
-   fn2, sn2 := getInitials("Frontend Eng")
-   fmt.Println(fn2, sn2)
-
-
+   n1,n2 := getInitials("Samuel Jr")
+   fmt.Println(n1, n2)
 }
+
+
