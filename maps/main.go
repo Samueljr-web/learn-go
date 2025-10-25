@@ -5,14 +5,10 @@ import "fmt"
 
 
 func main() {
-	menu := map[string]float64 {
-		"rice": 5000.00,
-		"spag": 2500.00,
-		"yam": 3550.00,
+	menu := map[string]int {
+		"a": 1,
+		"b": 2,
 	}
-	fmt.Println(menu)
-	fmt.Println(menu["yam"])
-
 	// looping maps
 	for i,v := range menu {
 		fmt.Printf("%v is %v \n", i, v)
